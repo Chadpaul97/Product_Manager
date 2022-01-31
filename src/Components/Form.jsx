@@ -1,4 +1,4 @@
-import React, {useState,useEffect}from 'react';
+import React, {useState}from 'react';
 import axios from 'axios';
 
 export default function Form(props) {
@@ -25,9 +25,9 @@ export default function Form(props) {
             </div>
             <form onSubmit={formHandler}>
                 <div className='container mt-3 d-flex flex-column w-25'>
-                    <input type="text" placeholder='title' onChange={(e) => setTitle(e.target.value)} value={title} name="title"/><br />
+                    <input type="text" placeholder='title'  onChange={(e) => setTitle(e.target.value)} value={title} name="title"/><br />
                     <input type="number" placeholder='price' min={1} onChange={(e) => setPrice(e.target.value)} value={price} name="price" /><br />
-                    <input type="text" placeholder='description' onChange={(e) => setDescription(e.target.value)} value={description} name="description"/><br />
+                    <input type="text" placeholder='description'  onChange={(e) => setDescription(e.target.value)} value={description} name="description"/><br />
                     <button type='submit'>Create</button>
                 </div>
             </form>
